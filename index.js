@@ -9,16 +9,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: "https://todo-front-ddbr5ccil-muzzammilafridis-projects.vercel.app", // Allow your frontend
-  methods: ["GET", "POST", "PUT", "DELETE"], // Define allowed HTTP methods
-  credentials: true, // Allow credentials if needed
-}));
+app.use(cors({ origin: "*" }));
+ 
 app.use(bodyParser.json());
-
+ 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI) 
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error(err));
 
