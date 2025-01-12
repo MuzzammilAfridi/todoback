@@ -19,6 +19,11 @@ mongoose
   .catch((err) => console.error(err));
 
 // Routes
+
+app.get('/', (req, res)=>{
+  res.send("Hi this is Lassun Fassun")
+})
+
 const taskRoutes = require("./routes/taskRoutes");
 app.use("/tasks", taskRoutes);
 
