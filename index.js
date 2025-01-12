@@ -9,7 +9,11 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: "https://vercel.com/muzzammilafridis-projects/todo-front", // Frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // Include this if cookies/auth headers are required
+}));
  
 app.use(bodyParser.json());
  
