@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://vercel.com/muzzammilafridis-projects/todo-front", // Frontend domain
+  origin: "https://todo-front-mern.vercel.app", // Frontend domain
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // Include this if cookies/auth headers are required
 }));
