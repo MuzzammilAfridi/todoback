@@ -26,7 +26,7 @@ mongoose
 // Routes
 
 app.get('/', (req, res)=>{
-  res.send("Hi this is Lassun Fassun")
+  res.send("Hi this is Todo list")
 })
 
 const taskRoutes = require("./routes/taskRoutes");
